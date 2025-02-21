@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Fitness - Transform Your Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0" data-aos="fade-right">
+                <a href="#" class="flex items-center group">
+                    <img src="assets/images/logo.webp" alt="Elite Fitness Logo"
+                        class="h-14 w-14 transform transition-all duration-300 group-hover:scale-105 group-hover:brightness-110 rounded-full">
+                </a>
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-4">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#trainers" class="nav-link">Trainers</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+            </nav>
+
+            <!-- Join Now Button -->
+            <button class="bg-blue-600 text-white px-6 py-2 text-base lg:text-lg rounded-full hover:bg-blue-700 transition duration-300 hidden md:block"
+                onclick="openModal()">
+                Join Now
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none" aria-expanded="false">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-screen bg-gray-900 text-white text-center space-y-2 py-4 transition-transform transform -translate-y-full z-40">
+        <a href="#home" class="nav-link block hover:text-gray-400 text-lg sm:text-xl py-2">Home</a>
+        <a href="#programs" class="nav-link block hover:text-gray-400 text-lg sm:text-xl py-2">Programs</a>
+        <a href="#trainers" class="nav-link block hover:text-gray-400 text-lg sm:text-xl py-2">Trainers</a>
+        <a href="#testimonials" class="nav-link block hover:text-gray-400 text-lg sm:text-xl py-2">Testimonials</a>
+        <button class="bg-blue-600 text-white px-6 py-2 text-base lg:text-lg rounded-full hover:bg-blue-700 transition duration-300"
+            onclick="openModal()">
+            Join Now
+        </button>
+    </div>
+</nav>
+
+
+
+
+
+<!-- Hero Section -->
+<section id="home" class="">
+    <div class="relative h-screen flex items-center justify-center bg-cover bg-center" 
+        style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+        <div class="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"></div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 animate-float pt-[40px]" data-aos="fade-down" data-aos-duration="1000">
+                Transform Your Life
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-6 sm:mb-8" data-aos="fade-up" data-aos-delay="200">
+                Expert coaching, personalized programs, real results.
+            </p>
+            <button class="bg-white text-blue-600 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg lg:text-xl font-semibold 
+                rounded-full hover:bg-gray-200 transition duration-300" 
+                data-aos="zoom-in" data-aos-delay="400" onclick="openModal()">
+                Start Your Journey
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section id="programs" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16" data-aos="fade-down">Our Programs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up">
+                <div class="h-48 sm:h-56 md:h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Personal Training</h3>
+                    <p class="text-gray-600 text-base sm:text-lg mb-6">One-on-one coaching tailored to your specific goals and needs.</p>
+                    <button class="bg-blue-600 text-white px-5 sm:px-6 py-2 sm:py-3 text-base sm:text-lg rounded-full hover:bg-blue-700 transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 sm:h-56 md:h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Group Classes</h3>
+                    <p class="text-gray-600 text-base sm:text-lg mb-6">High-energy workouts in a motivating group environment.</p>
+                    <button class="bg-blue-600 text-white px-5 sm:px-6 py-2 sm:py-3 text-base sm:text-lg rounded-full hover:bg-blue-700 transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-48 sm:h-56 md:h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="p-6 sm:p-8">
+                    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">Online Coaching</h3>
+                    <p class="text-gray-600 text-base sm:text-lg mb-6">Expert guidance and support from anywhere in the world.</p>
+                    <button class="bg-blue-600 text-white px-5 sm:px-6 py-2 sm:py-3 text-base sm:text-lg rounded-full hover:bg-blue-700 transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trainers Section -->
+<section id="trainers" class="py-20 bg-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 sm:mb-16" data-aos="fade-down">Expert Trainers</h2>
+        <div class="relative">
+            <div class="flex overflow-x-auto gap-8 scroll-smooth snap-x snap-mandatory hide-scrollbar pb-4" id="trainersSlider">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1597347343908-2937e7dcc560?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">John Smith</h3>
+                        <p class="text-gray-600">Strength & Conditioning</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/images/taiener.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Sarah Johnson</h3>
+                        <p class="text-gray-600">Nutrition Specialist</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1567013127542-490d757e51fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Mike Williams</h3>
+                        <p class="text-gray-600">HIIT Expert</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Emma Davis</h3>
+                        <p class="text-gray-600">Yoga Instructor</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/images/5.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Emma Davis</h3>
+                        <p class="text-gray-600">Yoga Instructor</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[350px] snap-start" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/images/03.avif')"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2">Emma Davis</h3>
+                        <p class="text-gray-600">Yoga Instructor</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none hidden md:block" onclick="scrollTrainers('left')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100 focus:outline-none hidden md:block" onclick="scrollTrainers('right')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Success Stories</h2>
+        <div class="relative">
+            <div class="flex overflow-x-auto gap-8 scroll-smooth snap-x snap-mandatory hide-scrollbar" id="successStoriesSlider">
+                <!-- image 01 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[600px] snap-start" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="grid grid-cols-1">
+                            <div class="relative">
+                                <img src="assets/images/frist.jpg" alt="Before transformation" class="w-full h-80 object-cover">
+                                <div class="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1 rounded-full text-sm">Before</div>
+                                <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">Emma Thompson</h3>
+                                <p class="text-gray-600">Lost 30 lbs in 6 months</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The trainers at Elite Fitness completely transformed my life! Not only did I lose weight, but I gained confidence and strength I never knew I had. Their personalized approach and constant support made all the difference."</p>
+                        <div class="flex items-center text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- image 02 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[600px] snap-start" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="grid grid-cols-1">
+                            <div class="relative">
+                                <img src="assets/images/1031700_1.jpg" alt="Before transformation" class="w-full h-80 object-cover">
+                                <div class="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1 rounded-full text-sm">Before</div>
+                                <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">Emma Thompson</h3>
+                                <p class="text-gray-600">Lost 30 lbs in 6 months</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The trainers at Elite Fitness completely transformed my life! Not only did I lose weight, but I gained confidence and strength I never knew I had. Their personalized approach and constant support made all the difference."</p>
+                        <div class="flex items-center text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- image 03 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[600px] snap-start" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="grid grid-cols-1">
+                            <div class="relative">
+                                <img src="assets/images/1160439_1.jpg" alt="Before transformation" class="w-full h-80 object-cover">
+                                <div class="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1 rounded-full text-sm">Before</div>
+                                <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">Emma Thompson</h3>
+                                <p class="text-gray-600">Lost 30 lbs in 6 months</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The trainers at Elite Fitness completely transformed my life! Not only did I lose weight, but I gained confidence and strength I never knew I had. Their personalized approach and constant support made all the difference."</p>
+                        <div class="flex items-center text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- image 04 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[600px] snap-start" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="grid grid-cols-1">
+                            <div class="relative">
+                                <img src="assets/images/652f731edbc7b.png" alt="Before transformation" class="w-full h-80 object-cover">
+                                <div class="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1 rounded-full text-sm">Before</div>
+                                <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">Emma Thompson</h3>
+                                <p class="text-gray-600">Lost 30 lbs in 6 months</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The trainers at Elite Fitness completely transformed my life! Not only did I lose weight, but I gained confidence and strength I never knew I had. Their personalized approach and constant support made all the difference."</p>
+                        <div class="flex items-center text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- image 05 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-full md:w-[600px] snap-start" data-aos="fade-up">
+                    <div class="relative">
+                        <div class="grid grid-cols-1">
+                            <div class="relative">
+                                <img src="assets/images/download (1).jpeg" alt="Before transformation" class="w-full h-80 object-cover">
+                                <div class="absolute top-4 left-4 bg-gray-900 text-white px-4 py-1 rounded-full text-sm">Before</div>
+                                <div class="absolute top-4 right-4 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Emma Thompson" class="w-12 h-12 rounded-full object-cover mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg">Emma Thompson</h3>
+                                <p class="text-gray-600">Lost 30 lbs in 6 months</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The trainers at Elite Fitness completely transformed my life! Not only did I lose weight, but I gained confidence and strength I never knew I had. Their personalized approach and constant support made all the difference."</p>
+                        <div class="flex items-center text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-10 -ml-5" onclick="scrollSlider('left')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg z-10 -mr-5" onclick="scrollSlider('right')">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Now Modal -->
+    <section class="mx-auto text-center">
+        <!-- Join Modal -->
+        <div id="joinModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+            <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 relative shadow-lg transform scale-95 transition-transform duration-300 ease-out">
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                
+                <!-- Modal Title -->
+                <h2 class="text-2xl font-bold mb-6 text-center">Join Elite Fitness</h2>
+                
+                <!-- Form -->
+                <form id="joinForm" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label for="program" class="block text-gray-700 mb-2">Preferred Program</label>
+                        <select id="program" name="program" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                            <option value="">Select a program</option>
+                            <option value="personal">Personal Training</option>
+                            <option value="group">Group Classes</option>
+                            <option value="online">Online Coaching</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold mb-4">Elite Fitness</h3>
+                    <p class="text-gray-400">Transform your life with our expert training and nutrition programs.</p>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300 hover:translate-x-2 inline-block">Home</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300 hover:translate-x-2 inline-block">Programs</a></li>
+                        <li><a href="#trainers" class="text-gray-400 hover:text-white transition duration-300 hover:translate-x-2 inline-block">Trainers</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300 hover:translate-x-2 inline-block">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center hover:translate-x-2 transition-transform duration-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            123 Fitness Street
+                        </li>
+                        <li class="flex items-center hover:translate-x-2 transition-transform duration-300">
+                            <i class="fas fa-city mr-2"></i>
+                            New York, NY 10001
+                        </li>
+                        <li class="flex items-center hover:translate-x-2 transition-transform duration-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            Phone: (555) 123-4567
+                        </li>
+                        <li class="flex items-center hover:translate-x-2 transition-transform duration-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Email: info@elitefitness.com
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/elitefitness" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-125 transform">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://twitter.com/elitefitness" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-125 transform">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="https://instagram.com/elitefitness" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-pink-500 transition-all duration-300 hover:scale-125 transform">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/elitefitness" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-blue-600 transition-all duration-300 hover:scale-125 transform">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                        <a href="https://youtube.com/c/elitefitness" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-red-500 transition-all duration-300 hover:scale-125 transform">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400" data-aos="fade-up" data-aos-duration="1000">
+                <p>&copy; 2025 Elite Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function openModal() {
+            document.getElementById('joinModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('joinModal').classList.add('hidden');
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
